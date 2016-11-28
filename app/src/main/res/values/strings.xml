@@ -1,5 +1,5 @@
 <resources>
     <string name="app_name">FacebookLogin</string>
     <!--Ingresamos el Identificador de la aplicación que encontramos en nuestro dashboard Web-->
-    <string name="facebook_app_id">FacebookLogin</string>
+    <string name="facebook_app_id">1913212342263680</string>
 </resources>
