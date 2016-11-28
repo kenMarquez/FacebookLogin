@@ -26,4 +26,7 @@ dependencies {
     })
     compile 'com.android.support:appcompat-v7:25.0.1'
     testCompile 'junit:junit:4.12'
+
+    //Agregamos la última versión de Facebook SDK
+    compile 'com.facebook.android:facebook-android-sdk:4.+'
 }
