@@ -8,10 +8,13 @@ import android.util.Log;
 import com.facebook.CallbackManager;
 import com.facebook.FacebookCallback;
 import com.facebook.FacebookException;
+import com.facebook.Profile;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
 public class MainActivity extends AppCompatActivity implements FacebookCallback<LoginResult> {
+
+    private static final String TAG = "MainActivity";
 
     private LoginButton loginButton;
     private CallbackManager callbackManager;
@@ -42,7 +45,13 @@ public class MainActivity extends AppCompatActivity implements FacebookCallback<
      */
     @Override
     public void onSuccess(LoginResult loginResult) {
-        Log.i("success", "success");
+        //Ahora podemos acceder a los datos del perfil del usuario
+        Profile profile = Profile.getCurrentProfile();
+
+        Log.i(TAG, profile.getId());
+        Log.i(TAG, profile.getName());
+        Log.i(TAG, profile.getLastName());
+        Log.i(TAG, "Picture: " + profile.getProfilePictureUri(70, 70));
     }
 
     /**
