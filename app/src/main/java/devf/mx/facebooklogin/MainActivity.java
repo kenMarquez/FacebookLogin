@@ -52,6 +52,8 @@ public class MainActivity extends AppCompatActivity implements FacebookCallback<
         Log.i(TAG, profile.getName());
         Log.i(TAG, profile.getLastName());
         Log.i(TAG, "Picture: " + profile.getProfilePictureUri(70, 70));
+
+        startActivity(new Intent(MainActivity.this, SessionActivity.class));
     }
 
     /**
